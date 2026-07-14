@@ -1,6 +1,7 @@
 node_modules/
 dist/
 drive-download-*.zip
+drive-download-*/
 _tmp_source_docs/
 _tmp_docx_images/
 .env
