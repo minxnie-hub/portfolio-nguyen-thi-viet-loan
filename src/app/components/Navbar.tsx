@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router";
 
 const links = [
-  { href: "/#about", label: "Giới thiệu" },
-  { href: "/#projects", label: "Bài tập" },
-  { href: "/#summary", label: "Tổng kết" },
-  { href: "/#interests", label: "Sở thích" },
-  { href: "/#contact", label: "Liên hệ" },
+  { to: "/#about", label: "Giới thiệu" },
+  { to: "/#projects", label: "Bài tập" },
+  { to: "/#summary", label: "Tổng kết" },
+  { to: "/#interests", label: "Sở thích" },
+  { to: "/#contact", label: "Liên hệ" },
 ];
 
 export function Navbar() {
@@ -34,15 +34,16 @@ export function Navbar() {
           </span>
           <span className="font-serif text-espresso tracking-wide">Việt Loan</span>
         </Link>
+
         <ul className="hidden items-center gap-7 md:flex">
           {links.map((l) => (
-            <li key={l.href}>
-              <a
-                href={l.href}
+            <li key={l.to}>
+              <Link
+                to={l.to}
                 className="text-sm text-cocoa/80 transition-colors hover:text-espresso"
               >
                 {l.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
