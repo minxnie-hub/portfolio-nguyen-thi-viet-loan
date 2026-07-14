@@ -1,7 +1,8 @@
 import { useParams, Link, useNavigate } from "react-router";
 import { motion } from "motion/react";
-import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight, Download } from "lucide-react";
 import { projects } from "../data/projects";
+import { pdfHref } from "../data/pdfs";
 import { Sakura } from "../components/Sakura";
 import { Bt1 } from "./details/Bt1";
 import { Bt2 } from "./details/Bt2";
@@ -39,6 +40,7 @@ export function ProjectDetail() {
 
   const prev = projects[index - 1];
   const next = projects[index + 1];
+  const pdfUrl = pdfHref(project.id);
 
   return (
     <article>
@@ -75,6 +77,16 @@ export function ProjectDetail() {
                 </span>
               ))}
             </div>
+            <a
+              href={pdfUrl}
+              target="_blank"
+              rel="noreferrer"
+              download
+              className="mt-7 inline-flex items-center gap-2 rounded-full bg-mocha px-5 py-2.5 text-sm text-cream shadow-[0_14px_30px_-20px_rgba(92,68,51,0.8)] transition-transform hover:-translate-y-0.5 hover:bg-cocoa"
+            >
+              <Download className="h-4 w-4" />
+              Tải PDF minh chứng
+            </a>
           </motion.div>
         </div>
       </header>

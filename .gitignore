@@ -1,5 +1,8 @@
 node_modules/
 dist/
+drive-download-*.zip
+_tmp_source_docs/
+_tmp_docx_images/
 .env
 .env.*
 npm-debug.log*
