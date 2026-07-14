@@ -14,7 +14,7 @@ export function SectionHeading({
       </span>
       <h2
         className="mt-2 font-serif text-espresso"
-        style={{ fontSize: "clamp(1.7rem, 4vw, 2.3rem)" }}
+        style={{ fontSize: "clamp(1.9rem, 4.5vw, 2.6rem)" }}
       >
         {title}
       </h2>
